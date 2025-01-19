@@ -30,13 +30,14 @@ body {
 
 nav {
   width: fit-content;
-  background-color: black;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
   padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-right: 1px solid gray;
 
   a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
   }
 }
 
@@ -96,23 +97,82 @@ main {
   width: 100%; /* Lebar 75% untuk main */
   box-sizing: border-box; /* Pastikan padding tidak memengaruhi lebar */
   overflow-y: auto; /* Tambahkan scroll jika konten lebih panjang */
-  background-color: black;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
 }
 
-.hero-container {
+/* .hero-container {
   width: 100%;
-  height: 100vh; /* Tinggi penuh viewport */
+  height: 100vh; 
   background-image: url("assets/spiderman.jpg");
-  background-size: cover; /* Pastikan gambar memenuhi area */
-  background-position: center; /* Posisi gambar */
+  background-size: cover; 
+  background-position: center; 
+} */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  object-fit: cover;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Fixed navbar styles */
-.header.scrolled {
-  position: fixed; /* Jadi fixed saat discroll */
-  background-color: black; /* Tambahkan warna latar belakang */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
+.header.scrolled-dark {
+  position: fixed;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: 0.5s ease-in-out;
+  opacity: 0.9;
+}
+
+.header.scrolled-light {
+  position: fixed;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease-in-out;
+  opacity: 0.9;
 }
 
 /* .gradient-overlay {
@@ -154,7 +214,7 @@ header {
 
 .search-input {
   color: white;
-  background-color: black;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
   padding: 10px 10px 10px 40px; /* Tambahkan padding kiri untuk ruang ikon */
   border: 1px solid gray; /* Warna border saat fokus */
   border-radius: 15px;
@@ -175,27 +235,61 @@ header {
   flex-direction: column;
   gap: 20px;
 
+  h1 {
+    font-size: 2.5rem;
+    margin-left: 30px;
+  }
+
   .cards {
     width: 100%;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 40px;
   }
 
   .card {
+    height: 400px;
     width: 250px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     margin-right: 40px;
     border: 1px solid gray;
+    position: relative;
+    overflow: hidden;
+    justify-self: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
   }
 
   .card-content {
     padding: 15px;
-    background-color: black;
+    background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
     border-radius: 0 0 20px 20px;
+  }
+
+  .overview {
+    color: gray;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    max-height: 100%;
+    padding: 1rem;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .card:hover .overview {
+    transform: translateY(0);
   }
 
   .rating {
@@ -209,7 +303,7 @@ header {
     p {
       border-radius: 10px;
       padding: 10px;
-      background-color: #1d1f2c;
+      background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
     }
   }
 
@@ -217,6 +311,16 @@ header {
     width: 100%;
     border-radius: 20px 20px 0 0;
   }
+}
+
+.light-mode {
+  background-color: #f9fafb;
+  color: #111827 !important;
+}
+
+.dark-mode {
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1)) !important;
+  color: whitesmoke !important;
 }
 
 /* Dark mode button */

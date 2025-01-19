@@ -68,7 +68,21 @@
                 </header>
             </div>
             <div class="hero">
-                <div class="gradient-overlay"></div>
+                <div class="hero-slider">
+                    <div class="slider-images">
+                        <video src="https://www.w3schools.com/html/mov_bbb.mp4" class="slider-image" autoplay muted
+                            loop></video>
+                        <video src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" class="slider-image" autoplay
+                            muted loop></video>
+                        <video src="https://samplelib.com/lib/preview/mp4/sample-10s.mp4" class="slider-image" autoplay
+                            muted loop></video>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
+                </div>
             </div>
 
             <div>
@@ -85,6 +99,10 @@
                                     </div>
                                     <p>23 Januari 2005
                                     </p>
+                                </div>
+                                <div class="overview">
+                                    <h3>Deskripsi</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptate.</p>
                                 </div>
                             </div>
                             <div class="card">

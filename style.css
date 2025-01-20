@@ -202,6 +202,16 @@ header {
   display: inline-block;
 }
 
+.search-icon-dark {
+  position: absolute;
+  left: 10px; /* Jarak ikon dari sisi kiri input */
+  top: 50%;
+  transform: translateY(-50%); /* Pastikan ikon sejajar secara vertikal */
+  width: 20px; /* Ukuran ikon */
+  height: 20px; /* Ukuran ikon */
+  pointer-events: none; /* Agar ikon tidak mengganggu input klik */
+}
+
 .search-icon {
   position: absolute;
   left: 10px; /* Jarak ikon dari sisi kiri input */
@@ -245,7 +255,8 @@ header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .card {
@@ -255,6 +266,7 @@ header {
     flex-direction: column;
     border-radius: 20px;
     margin-right: 40px;
+    margin-top: 50px;
     border: 1px solid gray;
     position: relative;
     overflow: hidden;

@@ -64,6 +64,14 @@ const anchor = document.querySelectorAll("a");
 const header1 = document.querySelectorAll("h1");
 const input = document.querySelector(".search-input");
 const overview = document.querySelector(".overview");
+const browseLight = document.querySelector(".browse-light");
+const browseDark = document.querySelector(".browse-dark");
+const popularLight = document.querySelector(".popular-light");
+const popularDark = document.querySelector(".popular-dark");
+const trendingLight = document.querySelector(".trending-light");
+const trendingDark = document.querySelector(".trending-dark");
+const searchIconDark = document.querySelector(".search-icon-dark");
+const searchIconLight = document.querySelector(".search-icon");
 
 function updateHeaderScroll(theme) {
   if (main.scrollTop > 0) {
@@ -81,6 +89,14 @@ function updateHeaderScroll(theme) {
 
 function applyTheme(theme) {
   if (theme === "light") {
+    searchIconDark.hidden = false;
+    searchIconLight.hidden = true;
+    browseLight.hidden = true;
+    browseDark.hidden = false;
+    popularLight.hidden = true;
+    popularDark.hidden = false;
+    trendingLight.hidden = true;
+    trendingDark.hidden = false;
     main.classList.add("light-mode");
     anchor.forEach((a) => a.classList.add("light-mode"));
     header1.forEach((h) => h.classList.add("light-mode"));
@@ -89,6 +105,14 @@ function applyTheme(theme) {
     overview.classList.add("dark-mode");
     lightModeSwitch.checked = false; // Sesuaikan dengan tema
   } else {
+    searchIconDark.hidden = true;
+    searchIconLight.hidden = false;
+    browseLight.hidden = false;
+    browseDark.hidden = true;
+    popularLight.hidden = false;
+    popularDark.hidden = true;
+    trendingLight.hidden = false;
+    trendingDark.hidden = true;
     main.classList.remove("light-mode");
     nav.classList.remove("light-mode");
     anchor.forEach((a) => a.classList.remove("light-mode"));

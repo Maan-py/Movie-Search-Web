@@ -4,14 +4,16 @@ const BROWSE = `${URL}/discover/movie?include_adult=false&include_video=false&la
 const POPULAR = `${URL}/discover/movie?sort_by-popularity.desc&${KEY_API}`;
 const TRENDING = `${URL}/trending/movie/day?language=en-US&${KEY_API}`;
 const IMG = "https://image.tmdb.org/t/p/w500";
+const searchURL = `${URL}/search/movie?${KEY_API}`;
 
 const browseContainer = document.querySelector(".browse");
 const popularContainer = document.querySelector(".popular");
 const trendingContainer = document.querySelector(".trending");
 
 const cards = document.querySelectorAll(".cards");
+const form = document.querySelector(".search-container");
+const searchInput = document.querySelector(".search-input");
 
-getMovies(BROWSE, browseContainer);
 getMovies(TRENDING, trendingContainer);
 getMovies(POPULAR, popularContainer);
 
@@ -25,15 +27,16 @@ function getMovies(url, container) {
 }
 
 function showMovies(data, container) {
-  const movieEl = document.createElement("div");
-  movieEl.classList.add("cards");
+  // const cardsContainer = container.querySelector(".cards");
+
+  container.querySelector(".cards").innerHTML = "";
 
   data.forEach((movie) => {
     const movieElement = document.createElement("div");
     movieElement.classList.add("card");
     movieElement.innerHTML = `
-      <img src="${IMG}${movie.backdrop_path}" alt="Browse">
-      <div class="card-content" >
+      <img src="${IMG}${movie.backdrop_path}" alt="${movie.title}">
+      <div class="card-content">
         <div class="rating">
           <h2>${movie.title}</h2>
         </div>
@@ -43,11 +46,27 @@ function showMovies(data, container) {
         <p>${movie.overview}</p>
       </div>
     `;
-    movieEl.appendChild(movieElement);
+    container.querySelector(".cards").appendChild(movieElement);
   });
-
-  container.appendChild(movieEl);
 }
+
+form.addEventListener("keyup", (e) => {
+  e.preventDefault();
+
+  const query = searchInput.value;
+  console.log(query);
+
+  if (query) {
+    getMovies(`${searchURL}&query=${query}`, browseContainer);
+    document.querySelector(".browse").scrollIntoView({ behavior: "smooth" });
+  } else {
+    getMovies(BROWSE, browseContainer);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  getMovies(BROWSE, browseContainer);
+});
 
 // console.log(movies);
 

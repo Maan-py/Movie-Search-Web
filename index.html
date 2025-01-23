@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Web Search</title>
     <!-- Font -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -113,11 +113,11 @@
                     </div>
 
                     <!-- Search -->
-                    <div class="search-container">
+                    <form class="search-container">
                         <img src="assets/search-interface-symbol-dark.png" class="search-icon-dark" alt="Search">
                         <img src="assets/search-interface-symbol.png" alt="Search" class="search-icon">
                         <input type="text" placeholder="Search..." class="search-input">
-                    </div>
+                    </form>
                 </header>
             </div>
             <div class="hero">
@@ -145,22 +145,26 @@
                 <div class="cards-container">
                     <div class="browse" id="browse">
                         <h1>Browse</h1>
+                        <div class="cards" id="cards-trending">
+                        </div>
                     </div>
                     <div class="popular" id="popular">
                         <h1>Popular</h1>
+                        <div class="cards" id="cards-trending">
+                        </div>
                     </div>
                     <div class="trending" id="trending">
                         <h1>Trending</h1>
-                        <!-- <div class="cards" id="cards-trending">
-                        </div> -->
+                        <div class="cards" id="cards-trending">
+                        </div>
                     </div>
                 </div>
         </main>
 
     </div>
-    <script src="script.js">
+    <script src="./script/script.js">
     </script>
-    <script src="fetch.js"></script>
+    <script src="./script/fetch.js"></script>
 </body>
 
 </html>

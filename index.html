@@ -12,6 +12,42 @@
 <body>
     <div class="container">
         <nav>
+            <!-- Mobile dark mode -->
+            <!-- Dark mode button -->
+            <div style="display: flex; justify-content: space-between;">
+                <div class="dark-mode-switch" id="dark-mode-switch" hidden>
+                    <label class="theme-switch">
+                        <input type="checkbox" class="theme-switch__checkbox" id="dark-mode-check2" checked>
+                        <div class="theme-switch__container">
+                            <div class="theme-switch__clouds"></div>
+                            <div class="theme-switch__stars-container">
+                            </div>
+                            <div class="theme-switch__circle-container">
+                                <div class="theme-switch__sun-moon-container">
+                                    <div class="theme-switch__moon">
+                                        <div class="theme-switch__spot"></div>
+                                        <div class="theme-switch__spot"></div>
+                                        <div class="theme-switch__spot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="hamburger-close">
+                    <input class="checkbox" type="checkbox" />
+                    <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                        <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="black"
+                            d="M6 11L44 11">
+                        </path>
+                        <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 24H43" class="lineMid line">
+                        </path>
+                        <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 37H43"
+                            class="lineBottom line">
+                        </path>
+                    </svg>
+                </div>
+            </div>
             <h1 class="title">Movie Web <span>Search</span></h1>
             <div class="news-feed">
                 <p>News Feed</p>
@@ -41,28 +77,41 @@
         <main class="main-content">
             <div class="hero-container">
                 <header class="header" id="header">
-                    <!-- Dark mode button -->
-                    <div class="dark-mode-switch">
-                        <label class="theme-switch">
-                            <input type="checkbox" class="theme-switch__checkbox" checked>
-                            <div class="theme-switch__container">
-                                <div class="theme-switch__clouds"></div>
-                                <div class="theme-switch__stars-container">
-                                    <!-- SVG Content -->
-                                </div>
-                                <div class="theme-switch__circle-container">
-                                    <div class="theme-switch__sun-moon-container">
-                                        <div class="theme-switch__moon">
-                                            <div class="theme-switch__spot"></div>
-                                            <div class="theme-switch__spot"></div>
-                                            <div class="theme-switch__spot"></div>
+                    <div class="header-container">
+                        <!-- Dark mode button -->
+                        <div class="dark-mode-switch" id="dark-mode-switch2">
+                            <label class="theme-switch">
+                                <input type="checkbox" class="theme-switch__checkbox" id="dark-mode-check" checked>
+                                <div class="theme-switch__container">
+                                    <div class="theme-switch__clouds"></div>
+                                    <div class="theme-switch__stars-container">
+                                    </div>
+                                    <div class="theme-switch__circle-container">
+                                        <div class="theme-switch__sun-moon-container">
+                                            <div class="theme-switch__moon">
+                                                <div class="theme-switch__spot"></div>
+                                                <div class="theme-switch__spot"></div>
+                                                <div class="theme-switch__spot"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </label>
+                            </label>
+                        </div>
+                        <!-- End dark mode button -->
+                        <div class="hamburger">
+                            <input class="checkbox" type="checkbox" />
+                            <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
+                                <path class="lineTop line" id="line" stroke-linecap="round" stroke-width="4"
+                                    stroke="black" d="M6 11L44 11"></path>
+                                <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 24H43"
+                                    class="lineMid line" id="line"></path>
+                                <path stroke-linecap="round" stroke-width="4" stroke="black" d="M6 37H43"
+                                    class="lineBottom line" id="line"></path>
+                            </svg>
+                        </div>
                     </div>
-                    <!-- End dark mode button -->
+
                     <!-- Search -->
                     <div class="search-container">
                         <img src="assets/search-interface-symbol-dark.png" class="search-icon-dark" alt="Search">
@@ -74,12 +123,15 @@
             <div class="hero">
                 <div class="hero-slider">
                     <div class="slider-images">
-                        <video src="https://www.w3schools.com/html/mov_bbb.mp4" class="slider-image" autoplay muted
+                        <!-- <video src="https://www.w3schools.com/html/mov_bbb.mp4" class="slider-image" autoplay muted
                             loop></video>
                         <video src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" class="slider-image" autoplay
                             muted loop></video>
                         <video src="https://samplelib.com/lib/preview/mp4/sample-10s.mp4" class="slider-image" autoplay
-                            muted loop></video>
+                            muted loop></video> -->
+                        <img src="assets/spiderman.jpg" class="slider-image" alt="Slider">
+                        <img src="assets/cat1.jpg" class="slider-image" alt="Slider">
+                        <img src="assets/cat2.jpg" class="slider-image" alt="Slider">
                     </div>
 
                     <div class="slider-controls">
@@ -93,300 +145,22 @@
                 <div class="cards-container">
                     <div class="browse" id="browse">
                         <h1>Browse</h1>
-                        <div class="cards">
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                                <div class="overview">
-                                    <h3>Deskripsi</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptate.</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cards">
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="popular" id="popular">
                         <h1>Popular</h1>
-                        <div class="cards">
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cards">
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="trending" id="trending">
                         <h1>Trending</h1>
-                        <div class="cards">
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cards">
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="assets/spiderman.jpg" alt="Browse">
-                                <div class="card-content">
-                                    <div class="rating">
-                                        <h2>Spiderman</h2>
-                                        <p>7.6</p>
-                                    </div>
-                                    <p>23 Januari 2005
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- <div class="cards" id="cards-trending">
+                        </div> -->
                     </div>
                 </div>
-            </div>
         </main>
 
     </div>
     <script src="script.js">
     </script>
+    <script src="fetch.js"></script>
 </body>
 
 </html>

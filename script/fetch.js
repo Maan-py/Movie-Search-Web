@@ -33,7 +33,11 @@ function getMovies(url, container) {
 function showMovies(data, container) {
   // const cardsContainer = container.querySelector(".cards");
 
-  container.querySelector(".cards").innerHTML = "";
+  const cards = container.querySelectorAll(".cards");
+
+  cards.forEach((card) => {
+    card.innerHTML = "";
+  });
 
   data.forEach((movie) => {
     const movieElement = document.createElement("div");

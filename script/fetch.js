@@ -4,19 +4,19 @@ const BROWSE = `${URL}/discover/movie?include_adult=false&include_video=false&la
 const POPULAR = `${URL}/discover/movie?sort_by-popularity.desc&${KEY_API}`;
 const TRENDING = `${URL}/trending/movie/day?language=en-US&${KEY_API}`;
 const IMG = "https://image.tmdb.org/t/p/w500";
-const VID = `${URL}/movie/1/videos?language=en-US&${KEY_API}`;
+// const VID = `${URL}/movie/1/videos?language=en-US&${KEY_API}`;
 const searchURL = `${URL}/search/movie?${KEY_API}`;
 
 const browseContainer = document.querySelector(".browse");
 const popularContainer = document.querySelector(".popular");
 const trendingContainer = document.querySelector(".trending");
-const sliderContainer = document.querySelector(".slider-images");
+// const sliderContainer = document.querySelector(".slider-images");
 
 const cards = document.querySelectorAll(".cards");
 const form = document.querySelector(".search-container");
 const searchInput = document.querySelector(".search-input");
 
-getMovies(VID, sliderContainer);
+// getMovies(VID, sliderContainer);
 getMovies(BROWSE, browseContainer);
 getMovies(TRENDING, trendingContainer);
 getMovies(POPULAR, popularContainer);

@@ -378,6 +378,7 @@ header {
   }
 
   .card-content {
+    height: 100%  ;
     display: flex;
     padding: 15px;
     background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
@@ -407,8 +408,10 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+
     gap: 10px;
     font-size: 20px;
+
     /* height: 2000px; */
     /* padding: 10px; */
 

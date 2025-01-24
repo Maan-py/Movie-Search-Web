@@ -27,3 +27,7 @@ https://movie-search-web-bay.vercel.app
 - Klik tombol "Popular" untuk mencari film populer.
 - Klik tombol "Trending" untuk mencari film trending.
 - Klik tombol "Search" untuk mencari film dengan kata kunci.
+
+## 📝 Note
+- Jika tampilan berantakan (CSS tidak berfungsi), coba ganti browser.
+- Gambar dan video agak lama untuk di-load.

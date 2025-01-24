@@ -39,7 +39,7 @@ function showMovies(data, container) {
     const movieElement = document.createElement("div");
     movieElement.classList.add("card");
     movieElement.innerHTML = `
-      <img src="${IMG}${movie.backdrop_path}" alt="${movie.title}">
+      <img src="${IMG}${movie.poster_path}" alt="${movie.title}">
       <div class="card-content">
         <div class="rating">
           <h2>${movie.title}</h2>

@@ -37,11 +37,10 @@ window.addEventListener("hashchange", handleHashChange);
 
 handleHashChange();
 
-// img slider
 let currentSlide = 0;
 
 function moveSlide(step) {
-  const slides = document.querySelectorAll(".slider-image");
+  const slides = document.querySelectorAll(".slide");
   const totalSlides = slides.length;
 
   currentSlide = (currentSlide + step + totalSlides) % totalSlides;
@@ -50,10 +49,12 @@ function moveSlide(step) {
   sliderImages.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
+// Otomatis geser slide setiap 30 detik
 setInterval(() => {
   moveSlide(1);
 }, 30000);
 
+// dark mode
 let currentTheme = localStorage.getItem("theme") || "light"; // Default ke "light"
 
 const header = document.getElementById("header");

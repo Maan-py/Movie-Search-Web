@@ -52,7 +52,7 @@ function moveSlide(step) {
 
 setInterval(() => {
   moveSlide(1);
-}, 3000);
+}, 30000);
 
 let currentTheme = localStorage.getItem("theme") || "light"; // Default ke "light"
 

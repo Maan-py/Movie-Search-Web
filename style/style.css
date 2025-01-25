@@ -337,6 +337,21 @@ header {
   flex-direction: column;
   gap: 20px;
 
+  hr {
+    width: 15%;
+    margin-left: 30px;
+    height: 3px;
+    margin-top: 5px;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  hr:hover {
+    width: 20%; /* Efek garis saat hover */
+  }
+
   h1 {
     font-size: 2.5rem;
     margin-left: 30px;
@@ -378,7 +393,7 @@ header {
   }
 
   .card-content {
-    height: 100%  ;
+    height: 100%;
     display: flex;
     padding: 15px;
     background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
@@ -785,6 +800,11 @@ header {
 
   .sonic {
     top: 20%;
+  }
+
+  .cards-container hr {
+    width: 50%;
+    margin-left: 15px;
   }
 }
 

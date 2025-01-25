@@ -752,16 +752,16 @@ header {
 
 @media screen and (max-width: 576px) {
   nav {
-    overflow-x: hidden;
-    height: 100%;
-    display: none;
-    position: absolute;
-    width: 50%;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 100;
-    animation: slideIn 0.5s ease-in-out;
+    position: fixed; 
+    overflow: hidden; 
+    height: 100%; 
+    width: 50%; 
+    left: 0; 
+    top: 0; 
+    z-index: 100; 
+    color: white; 
+    display: none; 
+    animation: slideIn 0.5s ease-in-out; 
   }
 
   .cards-container h1 {

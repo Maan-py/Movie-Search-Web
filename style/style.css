@@ -752,6 +752,8 @@ header {
 
 @media screen and (max-width: 576px) {
   nav {
+    overflow-x: hidden;
+    height: 100%;
     display: none;
     position: absolute;
     width: 50%;

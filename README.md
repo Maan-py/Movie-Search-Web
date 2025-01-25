@@ -8,9 +8,9 @@
 
 ## 📚 Penjelasan
 
-- Proyek ini adalah sebuah aplikasi web untuk mencari film. Pengguna dapat mencari film dengan kata kunci atau mengklik daftar film yang tersedia.
+- Proyek ini adalah sebuah aplikasi web untuk mencari film. Pengguna dapat mencari film dengan kata kunci, bukan untuk menonton film.
 - Proyek ini dibuat menggunakan HTML, CSS, dan JavaScript native.
-- Proyek ini dibuat memanfaatkan API MovieDB, yang dapat digunakan untuk mencari film.
+- Proyek ini dibuat memanfaatkan API TMDB, yang dapat digunakan untuk mencari film.
 - Proyek ini dibuat dengan menggunakan fetching API, yang dapat digunakan untuk mengambil data dari API MovieDB.
 - Proyek ini dibuat dengan menggunakan localStorage, yang dapat digunakan untuk menyimpan tema pengguna (light dan dark). Jadi, jika website di-refresh atau di-reload, tema pengguna tidak akan hilang.
 - Proyek sudah responsif, artinya dapat diakses dengan baik di desktop dan perangkat mobile.

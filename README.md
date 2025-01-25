@@ -30,4 +30,4 @@ https://movie-search-web-bay.vercel.app
 
 ## 📝 Note
 - Jika tampilan berantakan (CSS tidak berfungsi), coba ganti browser.
-- Gambar dan video agak lama untuk di-load.
+- Gambar dan video mungkin agak lama untuk di-load.

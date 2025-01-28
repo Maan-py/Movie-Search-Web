@@ -43,6 +43,7 @@ function showMovies(data, container) {
     const movieElement = document.createElement("div");
     movieElement.classList.add("card");
     movieElement.innerHTML = `
+      <p class="movie-rating">⭐️ ${Math.floor(movie.vote_average * 10) / 10}</p>
       <img src="${IMG}${movie.poster_path}" alt="${movie.title}">
       <div class="card-content">
         <div class="rating">
